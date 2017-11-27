@@ -530,7 +530,7 @@
     {
       "name": "SetupVNetPeering",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2015-01-01",
+      "apiVersion": "2017-05-10",
       "dependsOn": [
         "Microsoft.Resources/deployments/SetupVNET",
         "Microsoft.Resources/deployments/SetupVMSeries"
@@ -545,7 +545,7 @@
           "vNet1Name": {
                "value": "[parameters('virtualNetworkName')]"
           },
-          "vNet2ame": {
+          "vNet2Name": {
                "value": "[parameters('hubVnetName')]"
           },
 		  "vNet2ResourceGroupName": {
