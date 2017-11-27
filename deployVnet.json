@@ -134,7 +134,7 @@
         "properties": {
           "addressPrefix": "[parameters('subnetWWWPrefix')]"
         }
-      },
+      }
     ]
   },
   "resources": [

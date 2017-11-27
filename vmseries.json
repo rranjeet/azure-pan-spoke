@@ -230,7 +230,7 @@
     "nicName": "[parameters('vmName')]",
     "publicIPAddressType": "Dynamic",
     "nsgSetupURL" : "[concat(parameters('baseUrl'),'/nsg-new.json')]",
-    "SettingUpPublicIPUrl": "[concat(parameters('baseUrl'),'/publicip-new.json')]",
+    "SettingUpPublicIPUrl": "[concat(parameters('baseUrl'),'/deployPublicIP.json')]",
     "setupNICsURL": "[concat(parameters('baseUrl'),'/setupNICS-new.json')]",
     "vmTemplateUrl": "[concat(parameters('baseUrl'), '/virtual-machine-', parameters('authenticationType'),'-bs-', parameters('Bootstrap'), '.json')]",
     "location": "[resourceGroup().location]"

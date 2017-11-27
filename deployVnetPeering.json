@@ -26,7 +26,7 @@
 
     },
     "variables": {
-        "vNet1REsourceGroupName": "[resourceGroup().name]",
+        "vNet1ResourceGroupName": "[resourceGroup().name]",
         "vNet2ResourceGroupName":  "[parameters('vNet2ResourceGroupName')]",
         "vNet1tovNet2PeeringName": "[concat(parameters('vNet1Name'), '-', parameters('vNet2Name'), 'vnet-peering')]",
         "vNet2tovNet1PeeringName": "[concat(parameters('vNet2Name'), '-', parameters('vNet1Name'), 'vnet-peering')]"
@@ -55,7 +55,7 @@
                                 "allowGatewayTransit": "false",
                                 "useRemoteGateways": "false",
                                 "remoteVirtualNetwork": {
-                                    "id": "[resourceId(variables('vNet1ResourceGroupName'), 'Microsoft.Network/virtualNetworks',    parameters('vNet1Name'))]"                    
+                                    "id": "[resourceId(variables('vNet1ResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('vNet1Name'))]"                    
                                 }
                             }                                                    
                         }
