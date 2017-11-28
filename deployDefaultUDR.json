@@ -20,14 +20,14 @@
     },
     "resources": [
         {
-			"name": "defaultUDR",
+			"name": "defaultBackendUDR",
 			"type": "Microsoft.Network/routeTables",
 			"apiVersion": "2015-06-15",
 			"properties": {
 				"routes": [{
 					"name": "defaultRoute",
 					"properties": {
-						"addressPrefix": "[parameter('subnetPrefix')]",
+						"addressPrefix": "[parameters('subnetPrefix')]",
 						"nextHopType": "VirtualAppliance",
 						"nextHopIpAddress": "[parameters('nextHopIP')]"
 					}
