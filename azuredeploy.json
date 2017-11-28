@@ -286,6 +286,30 @@
 			}
 		},
 		{
+			"name": "SetupDefaultUDR",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2015-01-01",
+			"dependsOn": [
+				"Microsoft.Resources/deployments/SetupNSG"
+			],
+			"location": "[resourceGroup().location]",
+			"properties": {
+				"mode": "Incremental",
+				"templateLink": {
+					"uri": "[variables('defaultUdrSetupURL')]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"subnetPrefix": {
+						 "value": "0.0.0.0/0"
+					},
+					"nextHopIP": {
+						 "value": "[parameters('hubLoadBalancerIP')]"
+					}
+				}
+			}
+		},
+		{
 			"name": "SetupVNET",
 			"type": "Microsoft.Resources/deployments",
 			"apiVersion": "2015-01-01",
@@ -561,30 +585,6 @@
 					}
 				}
 			 }
-		},
-		{
-			"name": "SetupDefaultUDR",
-			"type": "Microsoft.Resources/deployments",
-			"apiVersion": "2015-01-01",
-			"dependsOn": [
-				"Microsoft.Resources/deployments/SetupNSG"
-			],
-			"location": "[resourceGroup().location]",
-			"properties": {
-				"mode": "Incremental",
-				"templateLink": {
-					"uri": "[variables('defaultUdrSetupURL')]",
-					"contentVersion": "1.0.0.0"
-				},
-				"parameters": {
-					"subnetPrefix": {
-						 "value": "0.0.0.0/0"
-					},
-					"nextHopIP": {
-						 "value": "[parameters('hubLoadBalancerIP')]"
-					}
-				}
-			}
 		}
 	],
 	"outputs": {
