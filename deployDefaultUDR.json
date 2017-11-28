@@ -23,8 +23,6 @@
 			"name": "defaultUDR",
 			"type": "Microsoft.Network/routeTables",
 			"apiVersion": "2015-06-15",
-			"location": "[resourceGroup().location]",
-
 			"properties": {
 				"routes": [{
 					"name": "defaultRoute",
