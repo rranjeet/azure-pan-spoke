@@ -134,7 +134,7 @@
         "properties": {
           "addressPrefix": "[parameters('subnetWWWPrefix')]",
           "routeTable": {
-            "id": "[resourceId('Microsoft.Network/routeTables/defaultBackendUDR')]"
+            "id": "[resourceId('Microsoft.Network/routeTables', 'defaultBackendUDR')]"
           }
         }
       }
