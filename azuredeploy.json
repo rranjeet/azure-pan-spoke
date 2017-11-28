@@ -564,8 +564,8 @@
 		},
 		{
 			"name": "SetupDefaultUDR",
-			"type": "Microsoft.Network/deployments",
-			"apiVersion": "2017-05-10",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2015-01-01",
 			"dependsOn": [
 				"Microsoft.Resources/deployments/SetupNSG"
 			],
