@@ -17,12 +17,14 @@
         }
     },
     "variables": {
+      "location": "[resourceGroup().location]"
     },
     "resources": [
         {
 			"name": "defaultBackendUDR",
 			"type": "Microsoft.Network/routeTables",
 			"apiVersion": "2015-06-15",
+			"location": "[variables('location')]",
 			"properties": {
 				"routes": [{
 					"name": "defaultRoute",
