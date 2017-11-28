@@ -147,7 +147,7 @@
 					"Standard_D1_v2"
 			 ],
 			 "metadata": {
-				"description": "Azure VM size for backend VMs.	Not all sizes are available in all regions."
+				"description": "Azure VM size for backend VMs. Not all sizes are available in all regions."
 			 },
 			 "defaultValue": "Standard_D1"
 		},
@@ -189,13 +189,13 @@
 		"MgmtPublicIPAddressName": {
 			"type": "string",
 			"metadata": {
-				"description": "DNS Name prefix of public IP resource for Management interface of VM-Series firewall.	Name must be globally unique."
+				"description": "DNS Name prefix of public IP resource for Management interface of VM-Series firewall. Name must be globally unique."
 			}
 		},
 		"storageAccountName": {
 			"type": "string",
 			"metadata": {
-				"description": "Name of the storage account created to store the VM's disks.	Storage account name must be globally unique."
+				"description": "Name of the storage account created to store the VM's disks. Storage account name must be globally unique."
 			} 
 		},
 		"storageAccountType": {
