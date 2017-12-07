@@ -219,6 +219,7 @@
 	},
 	"variables": {
 		"location" : "[resourceGroup().location]",
+		"rgname" : "[resourceGroup().name]",
 		"baseUrl" : "https://raw.githubusercontent.com/rranjeet/azure-pan-spoke/master",
 		"nsgURL" : "[concat(variables('baseUrl'),'/nsg-new.json')]",
 		"vnetURL" : "[concat(variables('baseUrl'),'/deployVnet.json')]",
