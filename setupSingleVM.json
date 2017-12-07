@@ -173,7 +173,7 @@
     "type": "Microsoft.Compute/virtualMachines/extensions",
     "location": "[resourceGroup().location]",
     "apiVersion": "2015-06-15",
-    "dependsOn": ["virtualMachineLoop"],
+    "dependsOn": ["[parameters('vmNamePrefix')]"],
     "tags": {
         "displayName": "scriptextensiondemo"
     },
