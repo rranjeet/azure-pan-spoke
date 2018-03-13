@@ -131,41 +131,6 @@
 			 },
 			 "defaultValue": "Standard_D1"
 		},
-		"firewallModel": {
-			 "type": "string",
-			 "defaultValue": "byol",
-			 "allowedValues": [
-					"byol",
-					"bundle1",
-					"bundle2"
-			 ],
-			 "metadata": {
-				 "description": "byol = Bring Your Own License; bundle1 = Bundle 1 PAYG (Hourly); bundle2 = Bundle 2 PAYG (Hourly)"
-			 }
-		},
-		"firewallVmName": {
-			 "type": "string",
-			 "metadata": {
-				"description": "Name prefix of VM-Series VM in the Azure portal"
-			 },	
-			 "defaultValue": "VM-Series"
-		},
-		"firewallVmSize": {
-			 "type": "string",
-			 "allowedValues": [
-					"Standard_D3",
-					"Standard_D4",
-					"Standard_D3_v2",
-					"Standard_D4_v2",
-					"Standard_D5_v2",
-					"Standard_D14_v2",
-					"Standard_A4"
-			 ],
-			 "metadata": {
-				"description": "Azure VM size for VM-Series"
-			 },
-			 "defaultValue": "Standard_D3"
-		},
 		"storageAccountName": {
 			"type": "string",
 			"metadata": {
@@ -220,7 +185,7 @@
 	"variables": {
 		"location" : "[resourceGroup().location]",
 		"rgname" : "[resourceGroup().name]",
-		"baseUrl" : "https://raw.githubusercontent.com/rranjeet/azure-pan-spoke/master",
+		"baseUrl" : "https://raw.githubusercontent.com/PaloAltoNetworks/Azure-Transit-VNet/master/azure-pan-spoke",
 		"nsgURL" : "[concat(variables('baseUrl'),'/nsg-new.json')]",
 		"vnetURL" : "[concat(variables('baseUrl'),'/deployVnet.json')]",
 		"storageAccountSetupURL" : "[concat(variables('baseUrl'),'/deployStorage.json')]",
